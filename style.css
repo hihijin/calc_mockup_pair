@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2? family= Bitter:wght@900 & family= 개구:wght@700 & family= Lato & family= Merriweather:wght@900 & family= 나눔+명조 & 가족 = 우분투 & display=swap');
 * {
     box-sizing: border-box;
+    font-family: 'Ubuntu', 산세리프;
   }
   body {
     height: 100vh;
@@ -8,12 +10,21 @@
     align-items: center;
     margin: 0;
     padding: 0;
+    flex-direction: column;
   }
-  img{
-    width:280px;
+  #apple{
+    width:50px;
+    height: 50px;
+    margin-bottom: 30px;
+    margin-top: -50px;
+    border-radius: 50%;
+    box-shadow: 0px 15px 50px 0px rgba(0,0,0,0.2);
+  }
+  #iphone{
+    width:290px;
     height: 580px;
-    border-radius: 50px;
-    box-shadow: 0px 70px 100px 0px rgba(0,0,0,1);
+    border-radius: 48px;
+    box-shadow: 0px 50px 70px 0px rgba(0,0,0,0.3);
   }
   .container {
     width: 250px;
@@ -25,7 +36,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-left: -264px;
+    margin-top: -540px;
   }
   .display{
     position: relative;
@@ -36,9 +47,10 @@
   }
   .result{
     position: absolute;
-    bottom: 0px;
-    right: 27px;
-    font-size: 55px;
+    bottom: 10px;
+    right: 23px;
+    font-size: 58px;
+    font-weight: lighter;
   }
   .calculator{
     width:100%;
@@ -49,30 +61,52 @@
     align-items: center;
   }
 button{
-    width:50px;
-    height:50px;
+    width:52px;
+    height:52px;
     border-radius: 50%;
     margin-bottom: 10px;
     font-size: 25px;
 }
-button:hover{
-    cursor: pointer;
-}
 .zero{
-    width:48%;
-    border-radius: 20px;
+    width:110px;
+    border-radius: 25px;
     text-align: start;
-    padding-left: 18px;
+    padding-left: 17px;
 }
 .etc{
     background-color: rgba(255,255,255,0.7);
     font-size: 20px;
+    font-weight: 900;
 }
 .number{
-    background-color: rgba(255,255,255,0.3);
+    background-color: rgba(255,255,255,0.25);
     color:white;
 }
 .operator{
     background-color: orange;
     color: white;
+    font-weight: 900;
+    padding-bottom: 5px;
+    margin-bottom: -5px;
+}
+button:hover{
+  cursor: pointer;
+}
+button.number:active{
+    animation: numberColorChange 10s linear forwards;
+}
+@keyframes numberColorChange{
+  from{background-color: rgba(255,255,255,0.15);}
+}
+button.operator:active{
+  animation: operatorColorChange 10s linear forwards;
+}
+@keyframes operatorColorChange{
+  from{background-color: rgba(255,165,0,0.8);}
+}
+button.etc:active{
+  animation: etcColorChange 10s linear forwards;
+}
+@keyframes etcColorChange{
+  from{background-color: rgba(255,255,255,0.5);}
 }
